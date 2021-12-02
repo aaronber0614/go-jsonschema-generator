@@ -1,4 +1,4 @@
-go-jsonschema-generator [![Build Status](https://img.shields.io/github/workflow/status/mcuadros/go-jsonschema-generator/Test.svg)](https://github.com/mcuadros/go-jsonschema-generator/actions) [![GoDoc](http://godoc.org/github.com/mcuadros/go-jsonschema-generator?status.png)](https://pkg.go.dev/github.com/mcuadros/go-jsonschema-generator)
+go-jsonschema-generator [![Build Status](https://img.shields.io/github/workflow/status/kowloonzh/go-jsonschema-generator/Test.svg)](https://github.com/kowloonzh/go-jsonschema-generator/actions) [![GoDoc](http://godoc.org/github.com/kowloonzh/go-jsonschema-generator?status.png)](https://pkg.go.dev/github.com/kowloonzh/go-jsonschema-generator)
 ==============================
 
 Basic [json-schema](http://json-schema.org/) generator based on Go types, for easy interchange of Go structures across languages.
@@ -10,7 +10,7 @@ Installation
 The recommended way to install go-jsonschema-generator
 
 ```
-go get github.com/mcuadros/go-jsonschema-generator
+go get github.com/kowloonzh/go-jsonschema-generator
 ```
 
 Examples
@@ -23,7 +23,7 @@ package main
 
 import (
   "fmt"
-  "github.com/mcuadros/go-jsonschema-generator"
+  "github.com/kowloonzh/go-jsonschema-generator"
 )
 
 type EmbeddedType struct {
