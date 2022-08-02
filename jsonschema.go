@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-const DEFAULT_SCHEMA = "http://json-schema.org/schema#"
+const DEFAULT_SCHEMA = "http://json-schema.org/draft-07/schema"
 
 type Document struct {
 	Schema string `json:"$schema,omitempty"`
