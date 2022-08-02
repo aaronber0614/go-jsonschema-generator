@@ -39,7 +39,7 @@ func (self *propertySuite) TestLoad(c *C) {
 	j.Read(&ExampleJSONBasic{})
 
 	c.Assert(*j, DeepEquals, Document{
-		Schema: "http://json-schema.org/schema#",
+		Schema: "http://json-schema.org/draft-07/schema",
 		property: property{
 			Type:     "object",
 			Required: []string{"Float64", "Interface"},
@@ -75,7 +75,7 @@ func (self *propertySuite) TestLoadWithTag(c *C) {
 	j.Read(&ExampleJSONBasicWithTag{})
 
 	c.Assert(*j, DeepEquals, Document{
-		Schema: "http://json-schema.org/schema#",
+		Schema: "http://json-schema.org/draft-07/schema",
 		property: property{
 			Type:     "object",
 			Required: []string{"test"},
@@ -102,7 +102,7 @@ func (self *propertySuite) TestLoadSliceAndContains(c *C) {
 	j.Read(&ExampleJSONBasicSlices{})
 
 	c.Assert(*j, DeepEquals, Document{
-		Schema: "http://json-schema.org/schema#",
+		Schema: "http://json-schema.org/draft-07/schema",
 		property: property{
 			Type: "object",
 			Properties: map[string]*property{
@@ -162,7 +162,7 @@ func (self *propertySuite) TestLoadTree(c *C) {
 	j.Read(&ExampleJSONTree{})
 
 	c.Assert(*j, DeepEquals, Document{
-		Schema: "http://json-schema.org/schema#",
+		Schema: "http://json-schema.org/draft-07/schema",
 		property: property{
 			Type: "object",
 			Properties: map[string]*property{
@@ -197,7 +197,7 @@ func (self *propertySuite) TestLoadNested(c *C) {
 	j.Read(&ExampleJSONNestedStruct{})
 
 	c.Assert(*j, DeepEquals, Document{
-		Schema: "http://json-schema.org/schema#",
+		Schema: "http://json-schema.org/draft-07/schema",
 		property: property{
 			Type: "object",
 			Properties: map[string]*property{
@@ -227,7 +227,7 @@ func (self *propertySuite) TestLoadEmbedded(c *C) {
 	j.Read(&ExampleJSONEmbeddedStruct{})
 
 	c.Assert(*j, DeepEquals, Document{
-		Schema: "http://json-schema.org/schema#",
+		Schema: "http://json-schema.org/draft-07/schema",
 		property: property{
 			Type: "object",
 			Properties: map[string]*property{
@@ -248,7 +248,7 @@ func (self *propertySuite) TestLoadMap(c *C) {
 	j.Read(&ExampleJSONBasicMaps{})
 
 	c.Assert(*j, DeepEquals, Document{
-		Schema: "http://json-schema.org/schema#",
+		Schema: "http://json-schema.org/draft-07/schema",
 		property: property{
 			Type: "object",
 			Properties: map[string]*property{
@@ -274,7 +274,7 @@ func (self *propertySuite) TestLoadNonStruct(c *C) {
 	j.Read([]string{})
 
 	c.Assert(*j, DeepEquals, Document{
-		Schema: "http://json-schema.org/schema#",
+		Schema: "http://json-schema.org/draft-07/schema",
 		property: property{
 			Type:  "array",
 			Items: &property{Type: "string"},
@@ -287,7 +287,7 @@ func (self *propertySuite) TestString(c *C) {
 	j.Read(true)
 
 	expected := "{\n" +
-		"    \"$schema\": \"http://json-schema.org/schema#\",\n" +
+		"    \"$schema\": \"http://json-schema.org/draft-07/schema\",\n" +
 		"    \"type\": \"boolean\"\n" +
 		"}"
 
@@ -299,7 +299,7 @@ func (self *propertySuite) TestMarshal(c *C) {
 	j.Read(10)
 
 	expected := "{\n" +
-		"    \"$schema\": \"http://json-schema.org/schema#\",\n" +
+		"    \"$schema\": \"http://json-schema.org/draft-07/schema\",\n" +
 		"    \"type\": \"integer\"\n" +
 		"}"
 
